@@ -11,13 +11,13 @@
 
 _Ascii Art généré avec => [Ascii Art Generator](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)_
 
-Benvenue sur le Github du cours de PhP !
+**Benvenue sur le Github du cours de PhP !**
 
 # Contenu
 
 ## CV
 
-Simple HTML/CSS généré avec IA, il servira de base pour y ajouter du PhP
+Simple HTML/CSS/JS/PHP généré avec IA, il servira de base pour y le cours de PhP
 
 ## CodeIgniter
 
