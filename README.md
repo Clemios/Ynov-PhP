@@ -17,7 +17,7 @@ _Ascii Art généré avec => [Ascii Art Generator](http://patorjk.com/software/t
 
 ## CV
 
-Simple HTML/CSS/JS/PHP généré avec IA, il servira de base pour y le cours de PhP
+Simple HTML/CSS/JS/PHP généré avec IA, il servira de base pour le cours de PhP
 
 ## CodeIgniter
 
