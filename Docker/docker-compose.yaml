@@ -7,16 +7,16 @@ services:
       - "80:80"
     volumes:
       - ./services/nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
-      - ./app:/app
+      - ../CV/WithEditModalAndLoginDatabase:/app
   app:
     build: services/php
     volumes:
-      - ./app:/app
+      - ../CV/WithEditModalAndLoginDatabase:/app
   db:
     image: mariadb:latest
     environment:
       MYSQL_ROOT_PASSWORD: "root"
-      MYSQL_DATABASE: "my_database"
+      MYSQL_DATABASE: "cv_db"
     volumes:
       - mysqldata:/var/lib/mysql
     ports:
