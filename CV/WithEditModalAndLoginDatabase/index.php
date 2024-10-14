@@ -1,118 +1,72 @@
 <?php
-session_start();
-require 'db.php'; // Include the database connection
+// Basic routing with GET and POST method support
 
-// Check if the user is logged in as admin
-$isAdmin = isset($_SESSION['is_admin']) && $_SESSION['is_admin'];
+$routes = [
+    'GET' => [
+        '/home' => 'home',
+        '/login' => 'login',
+        '/logout' => 'logout',
+        '/edit' => 'editProfile'
+    ],
+    'POST' => [
+        '/login' => 'processLogin',
+        '/edit' => 'processEditProfile'
+    ]
+];
 
-// Fetch personal information from the database
-$stmt = $pdo->prepare('SELECT * FROM personal_info WHERE id = 1');
-$stmt->execute();
-$personalInfo = $stmt->fetch();
-
-// Handle form submission and update the database (admin only)
-if ($_SERVER["REQUEST_METHOD"] == "POST" && $isAdmin) {
-    $name = $_POST['name'];
-    $title = $_POST['title'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $profileDescription = $_POST['profileDescription'];
-
-    // Update personal information in the database
-    $stmt = $pdo->prepare('UPDATE personal_info SET name = ?, title = ?, email = ?, phone = ?, profile_description = ? WHERE id = 1');
-    $stmt->execute([$name, $title, $email, $phone, $profileDescription]);
-
-    // Redirect to the CV page to reflect the changes
-    header("Location: index.php");
-    exit;
+// Get the request URI and request method
+$requestUri = rtrim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
+$requestMethod = $_SERVER['REQUEST_METHOD'];
+// Handle routing based on request method
+if (isset($routes[$requestMethod][$requestUri])) {
+    $function = $routes[$requestMethod][$requestUri];
+    if (function_exists($function)) {
+        call_user_func($function);
+    } else {
+        echo "The function $function does not exist!";
+    }
+} else {
+    echo $requestUri;
+    // If no route matches, display a 404 error page
+    header("HTTP/1.0 404 Not Found");
+    echo "<h1>404 - Page Not Found</h1>";
 }
 
-?>
+// Functions for different routes
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <!-- Header Section -->
-        <header>
-            <h1><?php echo $personalInfo['name']; ?></h1>
-            <p><?php echo $personalInfo['title']; ?></p>
-            <p>Email: <?php echo $personalInfo['email']; ?> | Phone: <?php echo $personalInfo['phone']; ?></p>
-            <?php if ($isAdmin): ?>
-                <button id="editBtn">Edit Personal Info</button>
-                <a href="logout.php">Logout</a>
-            <?php else: ?>
-                <a href="login.php">Admin Login</a>
-            <?php endif; ?>
-        </header>
+function home()
+{
+    echo "<h1>Welcome to the Home Page</h1>";
+}
 
-        <!-- Profile Section -->
-        <section class="profile">
-            <h2>Profile</h2>
-            <p><?php echo $personalInfo['profile_description']; ?></p>
-        </section>
+function login()
+{
+    echo '<form method="POST" action="/login">
+              <label>Username: <input type="text" name="username"></label><br>
+              <label>Password: <input type="password" name="password"></label><br>
+              <input type="submit" value="Login">
+          </form>';
+}
 
-        <!-- Modal for updating personal information (visible only for admin) -->
-        <?php if ($isAdmin): ?>
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Edit Personal Information</h2>
-                <form method="POST" action="">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" value="<?php echo $personalInfo['name']; ?>" required>
+function processLogin()
+{
+    echo "<h1>Processing Login...</h1>";
+    // Validate login form and handle authentication
+}
 
-                    <label for="title">Title:</label>
-                    <input type="text" id="title" name="title" value="<?php echo $personalInfo['title']; ?>" required>
+function editProfile()
+{
+    echo "<h1>Edit Profile Page</h1>";
+}
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" value="<?php echo $personalInfo['email']; ?>" required>
+function processEditProfile()
+{
+    echo "<h1>Processing Profile Edit...</h1>";
+    // Handle profile update
+}
 
-                    <label for="phone">Phone:</label>
-                    <input type="text" id="phone" name="phone" value="<?php echo $personalInfo['phone']; ?>" required>
-
-                    <label for="profileDescription">Profile Description:</label>
-                    <textarea id="profileDescription" name="profileDescription" required><?php echo $personalInfo['profile_description']; ?></textarea>
-
-                    <input type="submit" value="Save Changes">
-                </form>
-            </div>
-        </div>
-        <?php endif; ?>
-    </div>
-
-    <script>
-        // Get modal and elements
-        var modal = document.getElementById("myModal");
-        var btn = document.getElementById("editBtn");
-        var span = document.getElementsByClassName("close")[0];
-
-        // Open the modal when the edit button is clicked
-        if (btn) {
-            btn.onclick = function() {
-                modal.style.display = "block";
-            }
-        }
-
-        // Close the modal when the 'x' is clicked
-        if (span) {
-            span.onclick = function() {
-                modal.style.display = "none";
-            }
-        }
-
-        // Close the modal if the user clicks outside the modal content
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-</body>
-</html>
+function logout()
+{
+    echo "<h1>Logged Out</h1>";
+    // Handle logout logic here
+}

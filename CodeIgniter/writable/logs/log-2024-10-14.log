@@ -1,0 +1,1206 @@
+ERROR - 2024-10-14 08:12:44 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /app/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /app/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'root', 'cv_db', 3306, '', 0)
+#1 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#7 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#8 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#9 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#10 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /app/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#6 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#7 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#8 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#9 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-10-14 08:12:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personal_info`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-14 08:12:47 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /app/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /app/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'root', 'cv_db', 3306, '', 0)
+#1 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#7 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#8 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#9 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#10 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /app/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#6 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#7 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#8 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#9 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-10-14 08:12:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personal_info`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-14 08:12:48 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /app/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /app/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'root', 'cv_db', 3306, '', 0)
+#1 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#7 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#8 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#9 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#10 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /app/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#6 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#7 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#8 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#9 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-10-14 08:12:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personal_info`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-14 08:12:48 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /app/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /app/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'root', 'cv_db', 3306, '', 0)
+#1 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#7 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#8 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#9 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#10 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /app/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#6 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#7 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#8 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#9 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-10-14 08:12:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personal_info`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-14 08:12:48 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /app/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /app/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'root', 'cv_db', 3306, '', 0)
+#1 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#7 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#8 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#9 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#10 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /app/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#6 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#7 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#8 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#9 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-10-14 08:12:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personal_info`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-14 08:12:48 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /app/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /app/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'root', 'cv_db', 3306, '', 0)
+#1 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#7 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#8 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#9 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#10 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /app/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#6 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#7 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#8 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#9 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-10-14 08:12:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personal_info`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-14 08:12:48 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /app/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /app/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'root', 'cv_db', 3306, '', 0)
+#1 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#7 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#8 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#9 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#10 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /app/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#6 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#7 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#8 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#9 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-10-14 08:12:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personal_info`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-14 08:12:48 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /app/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /app/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'root', 'cv_db', 3306, '', 0)
+#1 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#7 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#8 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#9 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#10 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /app/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#6 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#7 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#8 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#9 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-10-14 08:12:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personal_info`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-14 08:12:48 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /app/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /app/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'root', 'cv_db', 3306, '', 0)
+#1 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#7 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#8 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#9 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#10 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /app/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#6 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#7 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#8 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#9 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-10-14 08:12:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personal_info`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-14 08:12:49 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /app/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /app/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'root', 'cv_db', 3306, '', 0)
+#1 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#7 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#8 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#9 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#10 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /app/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#6 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#7 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#8 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#9 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-10-14 08:12:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personal_info`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-14 08:12:49 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /app/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /app/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'root', 'cv_db', 3306, '', 0)
+#1 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#7 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#8 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#9 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#10 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /app/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#6 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#7 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#8 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#9 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-10-14 08:12:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personal_info`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-14 08:36:19 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /app/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /app/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'root', 'cv_db', 3306, '', 0)
+#1 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#7 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#8 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#9 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#10 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /app/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#6 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#7 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#8 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#9 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-10-14 08:36:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personal_info`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-14 08:40:16 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /app/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /app/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'root', 'cv_db', 3306, '', 0)
+#1 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#7 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#8 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#9 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#10 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /app/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#6 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#7 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#8 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#9 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-10-14 08:40:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personal_info`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-14 08:41:01 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /app/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /app/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'root', 'cv_db', 3306, '', 0)
+#1 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#7 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#8 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#9 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#10 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /app/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#6 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#7 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#8 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#9 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-10-14 08:41:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personal_info`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-14 08:41:06 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /app/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /app/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'root', 'cv_db', 3306, '', 0)
+#1 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#7 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#8 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#9 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#10 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /app/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#6 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#7 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#8 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#9 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-10-14 08:41:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personal_info`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-14 08:43:25 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /app/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /app/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'root', 'cv_db', 3306, '', 0)
+#1 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#7 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#8 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#9 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#10 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /app/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#6 /app/app/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+#7 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#8 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#9 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-10-14 08:43:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personal_info`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/CVController.php(25): App\Models\PersonalInfoModel->getPersonalInfo()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-14 08:44:03 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /app/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /app/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'root', 'cv_db', 3306, '', 0)
+#1 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#7 /app/app/Controllers/CVController.php(27): App\Models\PersonalInfoModel->getPersonalInfo()
+#8 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#9 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#10 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /app/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#6 /app/app/Controllers/CVController.php(27): App\Models\PersonalInfoModel->getPersonalInfo()
+#7 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#8 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#9 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-10-14 08:44:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personal_info`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/CVController.php(27): App\Models\PersonalInfoModel->getPersonalInfo()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-14 08:44:04 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /app/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /app/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'root', 'cv_db', 3306, '', 0)
+#1 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#7 /app/app/Controllers/CVController.php(27): App\Models\PersonalInfoModel->getPersonalInfo()
+#8 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#9 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#10 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /app/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /app/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /app/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /app/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /app/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /app/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /app/app/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+#6 /app/app/Controllers/CVController.php(27): App\Models\PersonalInfoModel->getPersonalInfo()
+#7 /app/system/CodeIgniter.php(933): App\Controllers\CVController->index()
+#8 /app/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+#9 /app/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /app/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /app/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-10-14 08:44:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personal_info`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/PersonalInfoModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/CVController.php(27): App\Models\PersonalInfoModel->getPersonalInfo()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-14 08:44:32 --> ErrorException: Undefined variable $personalInfo
+[Method: GET, Route: /]
+in APPPATH/Views/cv_view.php on line 14.
+ 1 APPPATH/Views/cv_view.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $personalInfo', '/app/app/Views/cv_view.php', 14)
+ 2 SYSTEMPATH/View/View.php(234): include('/app/app/Views/cv_view.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render('cv_view', [], true)
+ 5 APPPATH/Controllers/CVController.php(28): view('cv_view')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-14 08:44:32 --> ErrorException: Undefined variable $personalInfo
+[Method: GET, Route: /]
+in APPPATH/Views/cv_view.php on line 14.
+ 1 APPPATH/Views/cv_view.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $personalInfo', '/app/app/Views/cv_view.php', 14)
+ 2 SYSTEMPATH/View/View.php(234): include('/app/app/Views/cv_view.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render('cv_view', [], true)
+ 5 APPPATH/Controllers/CVController.php(28): view('cv_view')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-14 08:44:33 --> ErrorException: Undefined variable $personalInfo
+[Method: GET, Route: /]
+in APPPATH/Views/cv_view.php on line 14.
+ 1 APPPATH/Views/cv_view.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $personalInfo', '/app/app/Views/cv_view.php', 14)
+ 2 SYSTEMPATH/View/View.php(234): include('/app/app/Views/cv_view.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render('cv_view', [], true)
+ 5 APPPATH/Controllers/CVController.php(28): view('cv_view')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-14 08:44:33 --> ErrorException: Undefined variable $personalInfo
+[Method: GET, Route: /]
+in APPPATH/Views/cv_view.php on line 14.
+ 1 APPPATH/Views/cv_view.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $personalInfo', '/app/app/Views/cv_view.php', 14)
+ 2 SYSTEMPATH/View/View.php(234): include('/app/app/Views/cv_view.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render('cv_view', [], true)
+ 5 APPPATH/Controllers/CVController.php(28): view('cv_view')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-14 08:44:33 --> ErrorException: Undefined variable $personalInfo
+[Method: GET, Route: /]
+in APPPATH/Views/cv_view.php on line 14.
+ 1 APPPATH/Views/cv_view.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $personalInfo', '/app/app/Views/cv_view.php', 14)
+ 2 SYSTEMPATH/View/View.php(234): include('/app/app/Views/cv_view.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render('cv_view', [], true)
+ 5 APPPATH/Controllers/CVController.php(28): view('cv_view')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-14 08:44:34 --> ErrorException: Undefined variable $personalInfo
+[Method: GET, Route: /]
+in APPPATH/Views/cv_view.php on line 14.
+ 1 APPPATH/Views/cv_view.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $personalInfo', '/app/app/Views/cv_view.php', 14)
+ 2 SYSTEMPATH/View/View.php(234): include('/app/app/Views/cv_view.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render('cv_view', [], true)
+ 5 APPPATH/Controllers/CVController.php(28): view('cv_view')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-14 08:44:34 --> ErrorException: Undefined variable $personalInfo
+[Method: GET, Route: /]
+in APPPATH/Views/cv_view.php on line 14.
+ 1 APPPATH/Views/cv_view.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $personalInfo', '/app/app/Views/cv_view.php', 14)
+ 2 SYSTEMPATH/View/View.php(234): include('/app/app/Views/cv_view.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render('cv_view', [], true)
+ 5 APPPATH/Controllers/CVController.php(28): view('cv_view')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-14 08:45:09 --> ErrorException: Undefined variable $personalInfo
+[Method: GET, Route: /]
+in APPPATH/Views/cv_view.php on line 15.
+ 1 APPPATH/Views/cv_view.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $personalInfo', '/app/app/Views/cv_view.php', 15)
+ 2 SYSTEMPATH/View/View.php(234): include('/app/app/Views/cv_view.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render('cv_view', [], true)
+ 5 APPPATH/Controllers/CVController.php(28): view('cv_view')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-14 08:45:10 --> ErrorException: Undefined variable $personalInfo
+[Method: GET, Route: /]
+in APPPATH/Views/cv_view.php on line 15.
+ 1 APPPATH/Views/cv_view.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $personalInfo', '/app/app/Views/cv_view.php', 15)
+ 2 SYSTEMPATH/View/View.php(234): include('/app/app/Views/cv_view.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render('cv_view', [], true)
+ 5 APPPATH/Controllers/CVController.php(28): view('cv_view')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-14 08:45:13 --> ErrorException: Undefined variable $personalInfo
+[Method: GET, Route: /]
+in APPPATH/Views/cv_view.php on line 15.
+ 1 APPPATH/Views/cv_view.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $personalInfo', '/app/app/Views/cv_view.php', 15)
+ 2 SYSTEMPATH/View/View.php(234): include('/app/app/Views/cv_view.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render('cv_view', [], true)
+ 5 APPPATH/Controllers/CVController.php(28): view('cv_view')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-14 08:45:32 --> ErrorException: Undefined variable $personalInfo
+[Method: GET, Route: /]
+in APPPATH/Views/cv_view.php on line 15.
+ 1 APPPATH/Views/cv_view.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $personalInfo', '/app/app/Views/cv_view.php', 15)
+ 2 SYSTEMPATH/View/View.php(234): include('/app/app/Views/cv_view.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render('cv_view', [], true)
+ 5 APPPATH/Controllers/CVController.php(28): view('cv_view')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-14 08:45:32 --> ErrorException: Undefined variable $personalInfo
+[Method: GET, Route: /]
+in APPPATH/Views/cv_view.php on line 15.
+ 1 APPPATH/Views/cv_view.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $personalInfo', '/app/app/Views/cv_view.php', 15)
+ 2 SYSTEMPATH/View/View.php(234): include('/app/app/Views/cv_view.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render('cv_view', [], true)
+ 5 APPPATH/Controllers/CVController.php(28): view('cv_view')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-14 08:45:32 --> ErrorException: Undefined variable $personalInfo
+[Method: GET, Route: /]
+in APPPATH/Views/cv_view.php on line 15.
+ 1 APPPATH/Views/cv_view.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $personalInfo', '/app/app/Views/cv_view.php', 15)
+ 2 SYSTEMPATH/View/View.php(234): include('/app/app/Views/cv_view.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render('cv_view', [], true)
+ 5 APPPATH/Controllers/CVController.php(28): view('cv_view')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-14 08:45:32 --> ErrorException: Undefined variable $personalInfo
+[Method: GET, Route: /]
+in APPPATH/Views/cv_view.php on line 15.
+ 1 APPPATH/Views/cv_view.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $personalInfo', '/app/app/Views/cv_view.php', 15)
+ 2 SYSTEMPATH/View/View.php(234): include('/app/app/Views/cv_view.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render('cv_view', [], true)
+ 5 APPPATH/Controllers/CVController.php(28): view('cv_view')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-14 08:45:33 --> ErrorException: Undefined variable $personalInfo
+[Method: GET, Route: /]
+in APPPATH/Views/cv_view.php on line 15.
+ 1 APPPATH/Views/cv_view.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $personalInfo', '/app/app/Views/cv_view.php', 15)
+ 2 SYSTEMPATH/View/View.php(234): include('/app/app/Views/cv_view.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render('cv_view', [], true)
+ 5 APPPATH/Controllers/CVController.php(28): view('cv_view')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-14 08:45:33 --> ErrorException: Undefined variable $personalInfo
+[Method: GET, Route: /]
+in APPPATH/Views/cv_view.php on line 15.
+ 1 APPPATH/Views/cv_view.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $personalInfo', '/app/app/Views/cv_view.php', 15)
+ 2 SYSTEMPATH/View/View.php(234): include('/app/app/Views/cv_view.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render('cv_view', [], true)
+ 5 APPPATH/Controllers/CVController.php(28): view('cv_view')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-14 08:45:33 --> ErrorException: Undefined variable $personalInfo
+[Method: GET, Route: /]
+in APPPATH/Views/cv_view.php on line 15.
+ 1 APPPATH/Views/cv_view.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $personalInfo', '/app/app/Views/cv_view.php', 15)
+ 2 SYSTEMPATH/View/View.php(234): include('/app/app/Views/cv_view.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render('cv_view', [], true)
+ 5 APPPATH/Controllers/CVController.php(28): view('cv_view')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-14 08:45:33 --> ErrorException: Undefined variable $personalInfo
+[Method: GET, Route: /]
+in APPPATH/Views/cv_view.php on line 15.
+ 1 APPPATH/Views/cv_view.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $personalInfo', '/app/app/Views/cv_view.php', 15)
+ 2 SYSTEMPATH/View/View.php(234): include('/app/app/Views/cv_view.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render('cv_view', [], true)
+ 5 APPPATH/Controllers/CVController.php(28): view('cv_view')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CVController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CVController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

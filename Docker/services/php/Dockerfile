@@ -34,6 +34,7 @@ RUN docker-php-ext-configure gd \
 RUN docker-php-ext-install gd
 
 # Install the PHP intl extention
+RUN docker-php-ext-configure intl
 RUN docker-php-ext-install intl
 
 # Install the PHP mysqli extention
@@ -62,20 +63,20 @@ RUN docker-php-ext-install zip
 #####################################
 # Composer
 #####################################
-RUN curl -s http://getcomposer.org/installer | php && \
-    mv composer.phar /usr/local/bin/composer
+# RUN curl -s http://getcomposer.org/installer | php && \
+#     mv composer.phar /usr/local/bin/composer
 
-#####################################
-# Entrypoint
-#####################################
-COPY ./docker/php-fpm/docker-entrypoint.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/docker-entrypoint.sh
-RUN ln -s /usr/local/bin/docker-entrypoint.sh /
+# #####################################
+# # Entrypoint
+# #####################################
+# COPY ./docker/php-fpm/docker-entrypoint.sh /usr/local/bin/
+# RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+# RUN ln -s /usr/local/bin/docker-entrypoint.sh /
 
-WORKDIR /var/www/html
-COPY . /var/www/html/
+# WORKDIR /var/www/html
+# COPY . /var/www/html/
 
-RUN composer install
+# RUN composer install
 
 #####################################
 # Cleanup
@@ -84,5 +85,5 @@ RUN apt-get autoremove --purge -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["docker-entrypoint.sh"]
+# ENTRYPOINT ["docker-entrypoint.sh"]
+# CMD ["docker-entrypoint.sh"]
