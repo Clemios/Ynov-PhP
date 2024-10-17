@@ -17,6 +17,9 @@ $routes = [
 
 // Get the request URI and request method
 $requestUri = rtrim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
+if (empty($requestUri)) {
+    $requestUri = '/';
+}
 $requestMethod = $_SERVER['REQUEST_METHOD'];
 // Handle routing based on request method
 if (isset($routes[$requestMethod][$requestUri])) {
