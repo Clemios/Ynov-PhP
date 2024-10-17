@@ -3,6 +3,7 @@
 
 $routes = [
     'GET' => [
+        '/' => 'home',
         '/home' => 'home',
         '/login' => 'login',
         '/logout' => 'logout',
