@@ -22,16 +22,6 @@ class CVController extends BaseController
     // Display the CV
     public function index()
     {
-        function console_log($output, $with_script_tags = true)
-        {
-            $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) .
-                ');';
-            if ($with_script_tags) {
-                $js_code = '<script>' . $js_code . '</script>';
-            }
-            echo $js_code;
-        }
-        console_log("Hello World");
         $data['personalInfo'] = $this->personalInfoModel->getPersonalInfo();
         $data['isAdmin'] = $this->session->get('is_admin');
 
